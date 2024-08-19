@@ -82,15 +82,14 @@ public class WatcherActivity extends ActionBarActivity {
 
 	void checkBatteryLevel(long millisUntilFinished)
 	{
-        IntentFilter 	ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-		Intent 			batteryStatus = null;
+		SimpleDateFormat	sdf = new SimpleDateFormat("dd. MM. yyyy  HH:mm:ss", Locale.getDefault());
+		String				currentDateAndTime = sdf.format(new Date());
+        IntentFilter	 	ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+		Intent 				batteryStatus = null;
 
 		batteryStatus = getBaseContext().registerReceiver(null, ifilter);
 
 		// battery level (%)
-		SimpleDateFormat sdf = new SimpleDateFormat("dd. MM. yyyy  HH:mm:ss", Locale.getDefault());
-		String currentDateAndTime = sdf.format(new Date());
-		
 		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
         int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
         double batteryPct = (double)(level * 100) / (double)scale;
@@ -105,7 +104,7 @@ public class WatcherActivity extends ActionBarActivity {
         else if( status == BatteryManager.BATTERY_STATUS_FULL )
         {
             m_batteryStatus.setText("Full");
-            status = BatteryManager.BATTERY_STATUS_CHARGING;
+            status = BatteryManager.BATTERY_STATUS_CHARGING;	// this status should later be processes as scharging
         }
         else if( status == BatteryManager.BATTERY_STATUS_DISCHARGING )
         {
@@ -114,7 +113,7 @@ public class WatcherActivity extends ActionBarActivity {
         else if( status == BatteryManager.BATTERY_STATUS_NOT_CHARGING )
         {
             m_batteryStatus.setText("Not Charging");
-            status = BatteryManager.BATTERY_STATUS_DISCHARGING;
+            status = BatteryManager.BATTERY_STATUS_DISCHARGING;	// this status should later be processes as discharging
         }
         else if( status == BatteryManager.BATTERY_STATUS_UNKNOWN )
         {
