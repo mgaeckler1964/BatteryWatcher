@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true"
+    >
+
+	<TextView
+	    android:id="@+id/batteryLevel"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:textSize="20sp" />
+	
+	<TextView  
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:id="@+id/batteryStatus"
+	    android:textSize="20sp"/>
+	
+	<TextView  
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:id="@+id/totalMin"
+	    android:textSize="20sp"/>
+	
+	<TextView  
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:id="@+id/totalMax"
+	    android:textSize="20sp"/>
+	
+	<TextView  
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:id="@+id/lastMin"
+	    android:textSize="20sp"/>
+	
+	<TextView  
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:id="@+id/lastMax"
+	    android:textSize="20sp"/>
+	
+</LinearLayout>

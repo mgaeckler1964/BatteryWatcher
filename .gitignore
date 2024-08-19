@@ -2,6 +2,12 @@
 .gradle/
 build/
 
+# ADT Files
+bin/
+gen/
+libs/
+*.bak
+
 # Local configuration file (sdk path, etc)
 local.properties
 
