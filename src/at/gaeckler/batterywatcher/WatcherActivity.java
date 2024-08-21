@@ -223,6 +223,10 @@ public class WatcherActivity extends ActionBarActivity {
         	m_totalMax = START_MAX;
         	m_lastMin = START_MIN;
         	m_lastMax = START_MAX;
+        	m_totalMinDate = "";
+        	m_totalMaxDate = "";
+        	m_lastMinDate = "";
+        	m_lastMaxDate = "";
             checkBatteryLevel(0);
         }
         return super.onOptionsItemSelected(item);
