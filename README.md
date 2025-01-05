@@ -4,13 +4,35 @@
  Dieses Programm beobachtet den Ladezustand der Batterie.
  Es wird angezeigt:
  - Der aktuelle Ladezustand
- - Die höchste Ladung
+ - Die hÃ¶chste Ladung
  - Die niedrigste Ladung
  - Die Ladung als zuletzt der Ladevorgang startete
  - Die Ladung als zuletzt der Ladevorgang beendete
  
- Dieses Programm ist nützlich, wenn Du Androidgeräte mit einer Zeitschaltuhr gesteuert laden möchtest so
- daß immer genug Strom verfügbar ist, der Akku aber nicht ständig am Limit läuft.
+ Dieses Programm ist nÃ¼tzlich, wenn Du AndroidgerÃ¤te mit einer Zeitschaltuhr gesteuert laden mÃ¶chtest so
+ daÃŸ immer genug Strom verfÃ¼gbar ist, der Akku aber nicht stÃ¤ndig am Limit lÃ¤uft.
  
- Wenn die max. Werte über 80% sind, kann die Ladezeit reduziert werden. 
- Wenn die min. Werte unter 20% sind, sollte die Ladezeit erhöt werden.
+ Wenn die max. Werte Ã¼ber 80% sind, kann die Ladezeit reduziert werden. 
+ Wenn die min. Werte unter 20% sind, sollte die Ladezeit erhÃ¶t werden.
+
+ Zum Ãœbersetzen der Quellen habe ich Android Developer Tools v22.6.2-1085508 
+verwendet. Das gebaute Package kann hier
+
+https://www.gaeckler.at/Software/software.htm#AndroidBatteryWatcher (in Wien)
+
+oder hier
+
+https://www.gÃ¤ckler.de/Software/software.htm#AndroidBatteryWatcher (in Deutschland)
+
+geladen werden.
+
+---
+
+To build the package I used Android Developer Tools v22.6.2-1085508. The 
+compiled package can be downloaded from
+
+https://www.gaeckler.at/Software/software.htm#AndroidBatteryWatcher (in Vienna)
+
+or
+
+http://www.gÃ¤ckler.de/Software/software.htm#AndroidBatteryWatcher (in Germany)
