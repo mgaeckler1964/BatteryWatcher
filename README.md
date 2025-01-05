@@ -22,7 +22,7 @@ https://www.gaeckler.at/Software/software.htm#AndroidBatteryWatcher (in Wien)
 
 oder hier
 
-https://www.gäckler.de/Software/software.htm#AndroidBatteryWatcher (in Deutschland)
+http://www.gäckler.de/Software/software.htm#AndroidBatteryWatcher (in Deutschland)
 
 geladen werden.
 
