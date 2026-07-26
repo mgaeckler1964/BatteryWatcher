@@ -4,7 +4,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
@@ -15,7 +14,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class WatcherActivity extends ActionBarActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class WatcherActivity extends AppCompatActivity {
 
 	static final String CONFIGURATION_FILE = "BatteryWatcher.cfg";
 
