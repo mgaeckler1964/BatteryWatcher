@@ -6,11 +6,9 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
-        android:supportsRtl="true" android:enabled="true"
-        >
+        android:supportsRtl="true" android:enabled="true">
         <activity
             android:name="WatcherActivity"
-            android:label="@string/app_name"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,5 +17,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
