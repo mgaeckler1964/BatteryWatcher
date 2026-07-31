@@ -18,12 +18,12 @@ android {
     compileSdk 36
 
     defaultConfig {
-        applicationId "at.gaeckler.BatteryWatcher"
-        minSdk 14
+        applicationId "at.gaeckler.batterywatcher"
+        minSdk 26
         targetSdk 36
-        versionCode 2
-        versionName "1.7.29"
-        resValue "string", "app_version", versionName
+        versionCode 3
+        versionName "1.7.31"
+        resValue "string", "app_version", "\"${versionName}\""
     }
 
     sourceSets {
@@ -55,7 +55,7 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
 }
 
 configurations.configureEach {
