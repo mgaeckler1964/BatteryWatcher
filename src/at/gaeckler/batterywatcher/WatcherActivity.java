@@ -116,15 +116,13 @@ public class WatcherActivity extends AppCompatActivity {
 		SimpleDateFormat	sdf = new SimpleDateFormat("dd. MM. yyyy  HH:mm:ss", Locale.getDefault());
 		String				currentDateAndTime = sdf.format(new Date());
 		IntentFilter	 	ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-		Intent 				batteryStatus = null;
-
-		batteryStatus = getBaseContext().registerReceiver(null, ifilter);
+		Intent 				batteryStatus = getBaseContext().registerReceiver(null, ifilter);
 
 		// battery level (%)
 		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
 		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 		double batteryPct = (double)(level * 100) / (double)scale;
-		m_batteryLevel.setText("Level: " + Double.toString(batteryPct)+"% "+Long.toString(millisUntilFinished) + " " + currentDateAndTime);
+		m_batteryLevel.setText("Level: " + batteryPct+"% "+millisUntilFinished + " " + currentDateAndTime);
 
 		// battery status
 		int status = batteryStatus.getIntExtra(BatteryManager.EXTRA_STATUS, -1);
@@ -157,7 +155,7 @@ public class WatcherActivity extends AppCompatActivity {
 			m_totalMin = batteryPct;
 			m_totalMinDate = currentDateAndTime;
 		}
-		m_totalMinView.setText("Min: " + Double.toString(m_totalMin)+"% " + m_totalMinDate);
+		m_totalMinView.setText("Min: " + m_totalMin+"% " + m_totalMinDate);
 
 		// battery maximum
 		if( batteryPct>m_totalMax )
@@ -165,7 +163,7 @@ public class WatcherActivity extends AppCompatActivity {
 			m_totalMax = batteryPct;
 			m_totalMaxDate = currentDateAndTime;
 		}
-		m_totalMaxView.setText("Max: " + Double.toString(m_totalMax)+"% " + m_totalMaxDate);
+		m_totalMaxView.setText("Max: " + m_totalMax+"% " + m_totalMaxDate);
 
 		// last minimum/maximum
 		if( status != m_lastStatus )
@@ -182,8 +180,8 @@ public class WatcherActivity extends AppCompatActivity {
 			}
 			m_lastStatus = status;
 		}
-		m_lastMinView.setText("Last Min: " + Double.toString(m_lastMin)+"% " + m_lastMinDate);
-		m_lastMaxView.setText("Last Max: " + Double.toString(m_lastMax)+"% " + m_lastMaxDate);
+		m_lastMinView.setText("Last Min: " + m_lastMin+"% " + m_lastMinDate);
+		m_lastMaxView.setText("Last Max: " + m_lastMax+"% " + m_lastMaxDate);
 
 	}
 	@Override
@@ -191,14 +189,14 @@ public class WatcherActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_watcher);
 
-		m_batteryLevel = (TextView)findViewById( R.id.batteryLevel );
-		m_batteryStatus = (TextView)findViewById( R.id.batteryStatus );
+		m_batteryLevel = findViewById( R.id.batteryLevel );
+		m_batteryStatus = findViewById( R.id.batteryStatus );
 
-		m_totalMinView = (TextView)findViewById( R.id.totalMin );
-		m_totalMaxView = (TextView)findViewById( R.id.totalMax );
+		m_totalMinView = findViewById( R.id.totalMin );
+		m_totalMaxView = findViewById( R.id.totalMax );
 
-		m_lastMinView = (TextView)findViewById( R.id.lastMin );
-		m_lastMaxView = (TextView)findViewById( R.id.lastMax );
+		m_lastMinView = findViewById( R.id.lastMin );
+		m_lastMaxView = findViewById( R.id.lastMax );
 
 		SharedPreferences settings = getSharedPreferences(CONFIGURATION_FILE, 0);
 		m_totalMin = settings.getFloat(TOTAL_MIN_KEY,(float) START_MIN);
@@ -270,6 +268,6 @@ public class WatcherActivity extends AppCompatActivity {
 		editor.putString(LAST_MAX_DATE_KEY, m_lastMaxDate );
 
 		// Commit the edits!
-		editor.commit();
+		editor.apply();
 	}
 }
