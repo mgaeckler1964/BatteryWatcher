@@ -6,13 +6,11 @@
     <item
         android:id="@+id/action_init"
         android:orderInCategory="100"
-        android:title="Init"
-        app:showAsAction="never"/>
+        android:title="Init"/>
 
     <item
         android:id="@+id/action_exit"
         android:orderInCategory="100"
-        android:title="Exit"
-        app:showAsAction="never"/>
+        android:title="Exit"/>
     
 </menu>

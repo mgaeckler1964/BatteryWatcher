@@ -34,6 +34,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
@@ -44,9 +45,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class WatcherActivity extends AppCompatActivity {
+public class WatcherActivity extends Activity
+{
 
 	static final String CONFIGURATION_FILE = "BatteryWatcher.cfg";
 
